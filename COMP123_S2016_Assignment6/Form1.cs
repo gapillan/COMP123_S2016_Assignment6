@@ -47,7 +47,7 @@ namespace COMP123_S2016_Assignment6
             {
                 if (HeightTextBox.Text == "" || WeightTextBox.Text == "")
                 {                   
-                    MessageBox.Show("Fields can not be empty, please fill them out");
+                    MessageBox.Show("*Required: Please fill in all the fields");
 
                     if ((HeightTextBox.Text == "") || (HeightTextBox.Text == "" && WeightTextBox.Text == ""))
                     {
@@ -156,6 +156,23 @@ namespace COMP123_S2016_Assignment6
                 MessageBox.Show("Press OK to continue");
             }
         }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            /** 
+             *<summary>
+             *This shows clearing of the fields
+             *<summary>
+             */
+            HeightTextBox.Clear();
+            WeightTextBox.Clear();
+            ResultsTextBox.Clear();
+            ResultShowTextBox.Clear();
+        }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }

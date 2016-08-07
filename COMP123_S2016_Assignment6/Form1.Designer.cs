@@ -173,6 +173,7 @@
             this.ClearBtn.TabIndex = 14;
             this.ClearBtn.Text = "Clear";
             this.ClearBtn.UseVisualStyleBackColor = true;
+            this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
             // CloseBtn
             // 
@@ -183,6 +184,7 @@
             this.CloseBtn.TabIndex = 15;
             this.CloseBtn.Text = "Close";
             this.CloseBtn.UseVisualStyleBackColor = true;
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
             // ResultShowTextBox
             // 
