@@ -7,9 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/**
+ * Author: Golden Pamela Apillanes 
+ * Student#: 300867201
+ * Date: August 4th 2016
+ * Description: Assignment 6 - BMI Calculator
+ */
 namespace COMP123_S2016_Assignment6
 {
+    /**
+     * <summary> 
+     * This class is the "driver" class for our program
+     * </summary>
+     * 
+     * @class Program
+     */
     public partial class BMICalculatorForm : Form
     {
         public BMICalculatorForm()
@@ -37,11 +49,20 @@ namespace COMP123_S2016_Assignment6
 
         }
 
+        /** 
+         * <summary> 
+         * This eventhandler submits the content of the form when clicked 
+         * </summary>
+         * 
+         * @method SubmitBtn_Click 
+         * @param {object} sender
+         * @param {EventArgs} e
+         */
         private void SubmitBtn_Click(object sender, EventArgs e)
         {
             double height;
             double weight;
-            double results; 
+            double BMI; 
 
              try
             {
@@ -95,27 +116,27 @@ namespace COMP123_S2016_Assignment6
                 else {
                     if (ImperialBtn.Checked == true)
                     {
-                        results = ((weight * 703)) / ((height * height));
-                        ResultsTextBox.Text = Convert.ToString(results);
+                        BMI = ((weight * 703)) / ((height * height));
+                        ResultsTextBox.Text = Convert.ToString(BMI);
                         HeightTextBox.Enabled = false;
                         WeightTextBox.Enabled = false;
 
-                        if (results < 18.5)
+                        if (BMI < 18.5)
                         {
                             ResultShowTextBox.Text = Convert.ToString("Underweight");
                         }
 
-                        if ((results > 18.5) && (results < 24.9))
+                        if ((BMI > 18.5) && (BMI < 24.9))
                         {
                             ResultShowTextBox.Text = Convert.ToString("Normal");
                         }
 
-                        if ((results > 25) && (results < 29.9))
+                        if ((BMI > 25) && (BMI < 29.9))
                         {
                             ResultShowTextBox.Text = Convert.ToString("Overweight");
                         }
 
-                        if (results > 30)
+                        if (BMI > 30)
                         {
                             ResultShowTextBox.Text = Convert.ToString("Obese");
                         }
@@ -124,27 +145,27 @@ namespace COMP123_S2016_Assignment6
 
                     if (MetricBtn.Checked == true)
                     {
-                        results = (weight / (height * height));
-                        ResultsTextBox.Text = Convert.ToString(results);
+                        BMI = (weight / (height * height));
+                        ResultsTextBox.Text = Convert.ToString(BMI);
                         HeightTextBox.Enabled = false;
                         WeightTextBox.Enabled = false;
 
-                        if (results < 18.5)
+                        if (BMI < 18.5)
                         {
                             ResultShowTextBox.Text = Convert.ToString("Underweight");
                         }
 
-                        if ((results > 18.5) && (results < 24.9))
+                        if ((BMI > 18.5) && (BMI < 24.9))
                         {
                             ResultShowTextBox.Text = Convert.ToString("Normal");
                         }
 
-                        if ((results > 25) && (results < 29.9))
+                        if ((BMI > 25) && (BMI < 29.9))
                         {
                             ResultShowTextBox.Text = Convert.ToString("Overweight");
                         }
 
-                        if (results> 30)
+                        if (BMI> 30)
                         {
                             ResultShowTextBox.Text = Convert.ToString("Obese");
                         }
@@ -157,22 +178,35 @@ namespace COMP123_S2016_Assignment6
             }
         }
 
+        /** 
+         * <summary> 
+         * This evenhandler clears the content of the form when clicked 
+         * </summary>
+         * 
+         * @method CleartBtn_Click 
+         * @param {object} sender
+         * @param {EventArgs} e
+         */
         private void ClearBtn_Click(object sender, EventArgs e)
         {
-            /** 
-             *<summary>
-             *This shows clearing of the fields
-             *<summary>
-             */
             HeightTextBox.Clear();
             WeightTextBox.Clear();
             ResultsTextBox.Clear();
             ResultShowTextBox.Clear();
         }
 
+        /** 
+         * <summary> 
+         * This evenhandler closes the content of the form when clicked 
+         * </summary>
+         * 
+         * @method CloseBtn_Click 
+         * @param {object} sender
+         * @param {EventArgs} e
+         */
         private void CloseBtn_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are You Sure To Exit Programme ?", "Exit", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show("Are You Sure To Exit Program?", "Exit", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 Application.Exit();
             }
