@@ -46,7 +46,6 @@ namespace COMP123_S2016_Assignment6
 
         private void ResultLabel_Click(object sender, EventArgs e)
         {
-
         }
 
         /** 
