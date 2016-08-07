@@ -172,7 +172,10 @@ namespace COMP123_S2016_Assignment6
 
         private void CloseBtn_Click(object sender, EventArgs e)
         {
-          
+            if (MessageBox.Show("Are You Sure To Exit Programme ?", "Exit", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                Application.Exit();
+            }
         }
     }
 }

@@ -178,7 +178,7 @@
             // CloseBtn
             // 
             this.CloseBtn.Font = new System.Drawing.Font("Lucida Sans Unicode", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CloseBtn.Location = new System.Drawing.Point(312, 494);
+            this.CloseBtn.Location = new System.Drawing.Point(312, 480);
             this.CloseBtn.Name = "CloseBtn";
             this.CloseBtn.Size = new System.Drawing.Size(75, 34);
             this.CloseBtn.TabIndex = 15;
@@ -197,7 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 540);
+            this.ClientSize = new System.Drawing.Size(405, 542);
             this.Controls.Add(this.ResultShowTextBox);
             this.Controls.Add(this.CloseBtn);
             this.Controls.Add(this.ClearBtn);
